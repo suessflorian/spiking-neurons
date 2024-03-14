@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 jupyter = "*"
+torch = "*"
+torchvision = "*"
 
 [dev-packages]
 
