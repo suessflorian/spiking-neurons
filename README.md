@@ -1,4 +1,14 @@
-# Probabilistic Spiking Neurons (Research CS760)
+# Probabilistic Spiking Neurons
+This is a playground to get familiar with more biologically inspired neurons. It will be leveraged to build up a solid research path for [UOA CS760](https://courseoutline.auckland.ac.nz/dco/course/COMPSCI/760/1233) - will live in [this repository](https://github.com/suessflorian/biological-neurons/).
+
+## Quickstart
+Visualising `S-NN`s requires demonstrating temporal data, which is best done via some animations. We use `snntorch`'s animator util suite for this which on mac requires;
+
+```
+brew install ffmpeg
+```
+
+## Background
 S-NN's is a well defined research area that attempts to incorporate more "biological" like features into the model neuron. Rather than reading tricky whitepapers on this - the following should summarise this area neatly;
 
 ---
@@ -11,7 +21,7 @@ This can lead to destructive pathways though, an early 0 firing neuron will nega
 Think of `steps`, where a network at each `step` can be evaluated. The same neurons firing at `step` may not be firing at `step` + 1... but this accommodates another idea, where neurons themselves can have state! Rather than being functional, it can "remember" it's previous input state, and add to it current input state - simulating a build up of "voltage" for example (pulling analogy of the biological neuron) and as this eventually goes above a threshold, boom, it fires!
 
 ### Observation Window
-Because we are now looking at this time temporal point of view - we need to redefine what it means for a NN to express itself given an input. So we say that our NN can evaluate an input **given a time period**, say 300 steps. This is a hyper-parameter, we'll keep it constant for training and testing times.
+Because we are now looking at this temporal point of view - we need to redefine what it means for a NN to express itself given an input. So we say that our NN can evaluate an input **given a time period**, say 300 steps. This is a hyper-parameter, we'll keep it constant for training and testing times.
 
 #### Input Embedding
 So with an image, say MNIST dataset, series of 28x28 grayscale images. You can traditionally imagine them as a 28x28 matrix, each cell being a value of pixel intensity. One one end you have the colour white, other side you have black.
