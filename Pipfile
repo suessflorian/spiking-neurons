@@ -8,6 +8,8 @@ jupyter = "*"
 torch = "*"
 torchvision = "*"
 matplotlib = "*"
+snntorch = "*"
+scikit-image = "*"
 
 [dev-packages]
 
