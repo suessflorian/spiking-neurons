@@ -4,12 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-jupyter = "*"
 torch = "*"
 torchvision = "*"
 matplotlib = "*"
 snntorch = "*"
 scikit-image = "*"
+jupyterlab = "*"
+jupyterlab-lsp = "*"
+python-lsp-server = {extras = ["all"], version = "*"}
 
 [dev-packages]
 
